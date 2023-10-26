@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #c5c5c5;
+}
+
+.container{
+
+    height: 460px;
+    width: 800px;
+    overflow: hidden;
+    position: absolute; /*torna possivel alterar a posição do container*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* alterar a posição do eixo */
+}
+
+.navegacao {
+    position: absolute; /* posição em relação ao container */
+    bottom: 20px; /* distância a partir da basde */
+    left: 50%; /* distância a partir da esquerda */
+    transform: translate(-50%); /* alterar o eixo principal*/
+    display: flex; /*colocar o o conteúdo lado a lado  */
+    }
+
+    .bar {
+        background-color: #ff0000;  /* plano de fundo do indicador */
+        width: 30px; /*largura do indicador */
+        height: 5px; /* altura do indicador*/
+        margin: 6px; 
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    input {
+        display: none; /* ocultar as input do tipo radio */
+    }
+
+    .imagens {
+        display: flex;  /* posiciona uma imagem ao lado da outra */
+        width: 600%; /*define o tamanho da div imagens */
+        height: 100%; /* define a altura a div imagem */
+    }
+
+    .imagem {
+        width: 16.6666666667%; /* define a proporção do tamanho de cada imagem em relação ao elemento pai*/
+        transition: .5s;
+    }
+
+    .imagem img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #imagem1:checked ~ .img1 {
+        margin-left: 16.6666666667%;
+    }
+
+    #imagem2:checked ~ .img1 {
+        margin-left: 16.6666666667%;
+            }
+
+    #imagem3:checked ~ .img1 {
+        margin-left: -33.3333333333;
+    }
+
+    #imagem4:checked ~ .img1 {
+        margin-left: -50%;
+    }
+
+    #imagem5:checked ~ .img1 {
+        margin-left: -66.6666666667%;
+    }
+    
+    #imagem6:checked ~ .img1 {
+        margin-left: -83.3333333333%;
+    }
